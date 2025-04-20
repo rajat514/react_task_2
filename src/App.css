@@ -1,0 +1,56 @@
+.detail-hover {
+    transition: all .5s;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.356);
+        color: rgb(50, 55, 205);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translate(-50%, -200%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.overlay-modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.087) !important;
+    backdrop-filter: blur(10px);
+    transition: all 1s;
+}
+
+.modal-modal {
+    width: 50vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    animation: slide-down 1.5s ease 1;
+}
+
+.white-space {
+    white-space: nowrap !important;
+}
+
+.pagination-button {
+    background-color: #0a57ca63 !important;
+}
